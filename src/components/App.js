@@ -1,11 +1,13 @@
 import React from 'react'
-import Test from './Test'
+import Test1 from './Test1'
+import Test2 from './Test2'
 
 function App() {
   return (
-    <div className="App test">
+    <div className="App">
       Hello World!
-      <Test />
+      <Test1 />
+      <Test2 />
     </div>
   )
 }
