@@ -15,3 +15,7 @@ const reducer = (state = initialState, action) => {
 }
 
 export default reducer
+
+// TODO:
+// import { combineReducers } from 'redux'
+// export default combineReducers({})

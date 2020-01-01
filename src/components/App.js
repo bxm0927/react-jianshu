@@ -1,11 +1,11 @@
 import React from 'react'
-import AppHeader from './common/AppHeader'
+import Header from './common/Header'
 import styles from './App.module.scss'
 
 function App() {
   return (
-    <div className="App">
-      <AppHeader />
+    <div className={styles.app}>
+      <Header />
 
       <main className={styles.appContainer}>AppContainer</main>
 
