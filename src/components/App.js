@@ -1,13 +1,15 @@
 import React from 'react'
-import Test1 from './Test1'
-import Test2 from './Test2'
 
 function App() {
   return (
     <div className="App">
-      Hello World!
-      <Test1 />
-      <Test2 />
+      <header className="AppHeader">
+        AppHeader
+      </header>
+
+      <main className="AppContainer">AppContainer</main>
+
+      <footer className="AppFooter">AppFooter</footer>
     </div>
   )
 }
