@@ -1,0 +1,17 @@
+{
+  "id": "1592583",
+  "name": "react-jianshu",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "https://coding.imooc.com/class/chapter/229.html
+https://www.jianshu.com/",
+  "glyphs": [
+    {
+      "icon_id": "629357",
+      "name": "搜索",
+      "font_class": "sousuo1",
+      "unicode": "e668",
+      "unicode_decimal": 58984
+    }
+  ]
+}

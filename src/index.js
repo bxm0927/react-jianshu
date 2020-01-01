@@ -7,6 +7,7 @@ import store from './store'
 // global style
 import './assets/stylesheets/normalize.scss'
 import './assets/stylesheets/common.scss'
+import './assets/fonts/iconfont.css'
 
 ReactDOM.render(
   <Provider store={store}>

@@ -3,7 +3,7 @@
  * @Author: baixiaoming
  * @Date: 2018-11-27 11:02:41
  * @Last Modified by: xiaoming.bai
- * @Last Modified time: 2020-01-01 14:15:04
+ * @Last Modified time: 2020-01-01 15:55:16
  */
 
 // 尺寸规范
@@ -15,15 +15,15 @@ $color-bg      : #ffffff;  // 用于背景色
 $color-primary : #ea6f5a; // 主题色
 
 // 颜色规范 (通用标准色)
-$color-primary   : #488aff; // 主要信息
-$color-secondary : #32db64; // 次要信息
-$color-info      : #49b6d6; // 信息
-$color-success   : #84b547; // 成功
-$color-warning   : #f59c1a; // 警告
-$color-danger    : #f53d3d; // 危险
-$color-light     : #f4f4f4; // 亮色
-$color-gray      : #e2e2e2; // 灰色
-$color-dark      : #393d49; // 暗色
+// $color-primary   : #488aff; // 主要信息
+// $color-secondary : #32db64; // 次要信息
+// $color-info      : #49b6d6; // 信息
+// $color-success   : #84b547; // 成功
+// $color-warning   : #f59c1a; // 警告
+// $color-danger    : #f53d3d; // 危险
+// $color-light     : #f4f4f4; // 亮色
+// $color-gray      : #e2e2e2; // 灰色
+// $color-dark      : #393d49; // 暗色
 
 // 字体规范
 $size-primary  : 18px; // 主标题，粗体
@@ -35,8 +35,8 @@ $size-assist   : 12px; // 辅助信息
 $size-disabled : 12px; // 失效文字
 
 // 层级规范
-$z-index-1  : 1;     // 1 级
-$z-index-2  : 10;    // 2 级
-$z-index-3  : 100;   // 3 级
-$z-index-4  : 1000;  // 4 级
-$z-index-top: 9999;  // 最顶层
+$index-1  : 1;     // 1 级
+$index-2  : 10;    // 2 级
+$index-3  : 100;   // 3 级
+$index-4  : 1000;  // 4 级
+$index-top: 9999;  // 最顶层

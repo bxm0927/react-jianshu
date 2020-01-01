@@ -1,15 +1,15 @@
 import React from 'react'
+import AppHeader from './common/AppHeader'
+import styles from './App.module.scss'
 
 function App() {
   return (
     <div className="App">
-      <header className="AppHeader">
-        AppHeader
-      </header>
+      <AppHeader />
 
-      <main className="AppContainer">AppContainer</main>
+      <main className={styles.appContainer}>AppContainer</main>
 
-      <footer className="AppFooter">AppFooter</footer>
+      <footer className={styles.appFooter}>AppFooter</footer>
     </div>
   )
 }

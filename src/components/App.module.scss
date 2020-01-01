@@ -1,6 +1,5 @@
-.title {
-  color: yellow;
-  .subtitle {
-    color: red;
-  }
+@import '../assets/stylesheets/var.scss';
+
+.appContainer {
+  padding-top: $header-height;
 }
