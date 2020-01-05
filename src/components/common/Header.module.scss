@@ -72,9 +72,8 @@
       transition-delay: 0.1s;
       outline: none;
       &:focus {
+        width: 250px;
         transition-delay: 0s;
-        width: 240px;
-        outline: none;
       }
       &:focus + .searchIcon {
         background-color: #969696;
@@ -96,6 +95,78 @@
       cursor: pointer;
       &:hover {
         color: $color-primary;
+      }
+    }
+    .searchResult {
+      position: absolute;
+      top: 100%;
+      left: 0;
+
+      box-sizing: border-box;
+      margin-top: 8px;
+      padding: 14px;
+      width: 250px;
+      border-radius: 4px;
+      background-color: #fff;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+      &::before {
+        content: '';
+        position: absolute;
+        top: -6px;
+        left: 10%;
+        width: 24px;
+        height: 24px;
+        transform: rotate(45deg);
+        background-color: #fff;
+        box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+        z-index: -1;
+      }
+      &::after {
+        content: '';
+        position: absolute;
+        left: 10%;
+        bottom: 100%;
+        width: 0;
+        height: 0;
+        border: 12px solid transparent;
+        border-bottom-color: #fff;
+      }
+      .title {
+        font-size: 16px;
+        color: #969696;
+        line-height: 20px;
+      }
+      .hotSearch {
+        .hotList {
+          display: flex;
+          flex-wrap: wrap;
+          margin-top: 10px;
+        }
+        .hotItem {
+          margin-right: 8px;
+          margin-bottom: 8px;
+          padding: 0 4px;
+          border: 1px solid #ccc;
+          border-radius: 2px;
+          font-size: 12px;
+          color: #787878;
+        }
+      }
+      .historySearch {
+        margin-top: 2px;
+        padding-top: 10px;
+        border-top: 1px solid #dedede;
+        .historyList {
+          display: flex;
+          flex-direction: column;
+          margin-top: 10px;
+        }
+        .historyItem {
+          line-height: 40px;
+          &:hover {
+            background-color: rgb(240, 240, 240);
+          }
+        }
       }
     }
   }

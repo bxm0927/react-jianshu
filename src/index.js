@@ -5,7 +5,7 @@ import App from './components/App'
 import store from './store'
 
 // global style
-import './assets/stylesheets/normalize.scss'
+import './assets/stylesheets/myreset.scss'
 import './assets/stylesheets/common.scss'
 import './assets/fonts/iconfont.css'
 
