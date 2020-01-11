@@ -1,30 +1,62 @@
-import React, { useState } from 'react'
+import React, { useState, useCallback, useRef } from 'react'
 import { connect } from 'react-redux'
+import { shuffle } from 'lodash'
 import styles from './Header.module.scss'
 import logo from '../../assets/images/common/logo.png'
-import { fetchHotList } from '../../store/actionCreators'
+import { fetchHotList, fetchHotListSuccess } from '../../store/actionCreators'
 
-const Header = ({ hotList, fetchHotList }) => {
-  const [showSeaechResult, setShowSeaechResult] = useState(false)
+const Header = ({ hotList, fetchHotList, fetchHotListSuccess }) => {
+  const [focus, setFocus] = useState(false)
+  const [mouseEnter, setMouseEnter] = useState(false)
+  const changeIcon = useRef(null)
 
+  function fetchHistoryList() {
+    // localStorage
+    console.log('fetchHistoryList')
+  }
   function handelSearchInputFocus() {
+    // 如果有数据，就不请求，避免多次请求无意义的重复数据
     if (!hotList || !hotList.length) {
       fetchHotList()
     }
-    // fetchHistoryList()
-    setShowSeaechResult(true)
+    fetchHistoryList()
+    setFocus(true)
   }
   function handelSearchInputBlur() {
+    // 延时是为了避免某些点击因元素消失而失效
     setTimeout(() => {
-      setShowSeaechResult(false)
+      setFocus(false)
     }, 200)
   }
-  function renderSeaechResult(isShow) {
-    if (!isShow) return
+  function handelHotSearchMouseEnter() {
+    setMouseEnter(true)
+  }
+  function handelHotSearchMouseLeave() {
+    setMouseEnter(false)
+  }
+  function handelHotSearchChange() {
+    const newHotList = shuffle(hotList)
+    fetchHotListSuccess(newHotList)
+
+    // FIXME 只执行了一次，transform 没有改变
+    const originRotate = changeIcon.current.style.transform
+    changeIcon.current.style.transform = `rotate(${originRotate + 360}deg)`
+  }
+  function renderSeaechResult() {
     return (
-      <div className={styles.searchResult}>
+      <div
+        className={styles.searchResult}
+        onMouseEnter={handelHotSearchMouseEnter}
+        onMouseLeave={handelHotSearchMouseLeave}
+      >
         <div className={styles.hotSearch}>
-          <p className={styles.title}>热门搜索</p>
+          <p className={styles.title}>
+            热门搜索
+            <span className={styles.change} onClick={handelHotSearchChange}>
+              <i ref={changeIcon} className="iconfont icon-huanyihuan1" /> 换一换
+            </span>
+          </p>
+
           <ul className={styles.hotList}>
             {hotList.map((item, index) => (
               <li key={index} className={styles.hotItem}>
@@ -74,7 +106,7 @@ const Header = ({ hotList, fetchHotList }) => {
           />
           <i className={`iconfont icon-sousuo1 ${styles.searchIcon}`} />
 
-          {renderSeaechResult(showSeaechResult)}
+          {(focus || mouseEnter) && renderSeaechResult()}
         </div>
 
         <div className={styles.rightNav}>
@@ -103,6 +135,7 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = {
   fetchHotList,
+  fetchHotListSuccess,
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Header)

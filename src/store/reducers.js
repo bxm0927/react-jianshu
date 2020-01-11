@@ -1,4 +1,4 @@
-import { FETCH_HOT_LIST_SUCCESS } from './actionTypes'
+import { RESOLVE_HOTLIST } from './actionTypes'
 
 const initialState = {
   value: 0,
@@ -8,10 +8,11 @@ const initialState = {
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {
-    case FETCH_HOT_LIST_SUCCESS:
+    case RESOLVE_HOTLIST:
       return Object.assign({}, state, {
         hotList: action.hotList,
       })
+
     default:
       return state
   }
