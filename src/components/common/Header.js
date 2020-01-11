@@ -1,4 +1,4 @@
-import React, { useState, useCallback, useRef } from 'react'
+import React, { useState, useRef } from 'react'
 import { connect } from 'react-redux'
 import { shuffle } from 'lodash'
 import styles from './Header.module.scss'
