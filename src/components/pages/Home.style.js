@@ -1,6 +1,8 @@
 import styled from 'styled-components'
 
-export const HomeWrapper = styled.div``
+export const HomeWrapper = styled.div`
+  padding-top: 30px;
+`
 
 export const LeftWrapper = styled.div`
   float: left;
@@ -17,6 +19,7 @@ export const Banner = styled.div`
   img {
     display: block;
     width: 100%;
+    border-radius: 6px;
   }
 `
 export const Topic = styled.div`
@@ -52,4 +55,34 @@ export const Topic = styled.div`
   }
 `
 
-export const ArticleList = styled.div``
+export const ArticleListWrapper = styled.div`
+  margin-top: 40px;
+`
+
+export const ArticleList = styled.ul``
+
+export const ArticleListItem = styled.li`
+  position: relative;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  min-height: 140px;
+  border-bottom: 1px solid #f0f0f0;
+  &:first-child {
+    border-top: 1px solid #f0f0f0;
+  }
+`
+
+export const LeftInfo = styled.div`
+  box-sizing: border-box;
+  width: 500px;
+  background: red;
+`
+
+export const RightPic = styled.div`
+  position: absolute;
+  top: 20px;
+  right: 0;
+  width: 125px;
+  height: 100px;
+  background: red;
+`

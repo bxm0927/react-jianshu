@@ -1,0 +1,18 @@
+const initialState = {
+  topicList: [
+    { id: '1', name: '手绘', pic: 'https://i.picsum.photos/id/1/100/100.jpg' },
+    { id: '2', name: '社会热点', pic: 'https://i.picsum.photos/id/1022/100/100.jpg' },
+    { id: '3', name: '简书电影', pic: 'https://i.picsum.photos/id/1020/100/100.jpg' },
+    { id: '4', name: '读书', pic: 'https://i.picsum.photos/id/1018/100/100.jpg' },
+    { id: '5', name: '摄影', pic: 'https://i.picsum.photos/id/1024/100/100.jpg' },
+    { id: '6', name: '旅行·在路上', pic: 'https://i.picsum.photos/id/1023/100/100.jpg' },
+    { id: '7', name: '历史', pic: 'https://i.picsum.photos/id/1008/100/100.jpg' },
+  ],
+}
+
+export default (state = initialState, action) => {
+  switch (action.type) {
+    default:
+      return state
+  }
+}

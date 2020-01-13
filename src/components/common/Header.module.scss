@@ -109,18 +109,7 @@
       border-radius: 4px;
       background-color: #fff;
       box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
-      &::before {
-        content: '';
-        position: absolute;
-        top: -6px;
-        left: 10%;
-        width: 24px;
-        height: 24px;
-        transform: rotate(45deg);
-        background-color: #fff;
-        box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
-        z-index: -1;
-      }
+      z-index: 1;
       &::after {
         content: '';
         position: absolute;

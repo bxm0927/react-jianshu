@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import { shuffle } from 'lodash'
 import styles from './Header.module.scss'
 import logo from '../../assets/images/common/logo.png'
-import { fetchHotList, fetchHotListSuccess } from '../../store/actionCreators'
+import { fetchHotList, fetchHotListSuccess } from '../../store/modules/search/actionCreators'
 
 const Header = ({ hotList, fetchHotList, fetchHotListSuccess }) => {
   const [focus, setFocus] = useState(false)
@@ -130,7 +130,7 @@ const Header = ({ hotList, fetchHotList, fetchHotListSuccess }) => {
 }
 
 const mapStateToProps = state => ({
-  hotList: state.hotList,
+  hotList: state.search.hotList,
 })
 
 const mapDispatchToProps = {

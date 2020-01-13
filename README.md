@@ -1,3 +1,13 @@
+# react-jianshu
+
+这是一个使用 React 构建的模仿简书 PC 站的联系项目。
+
+技术栈：React + React Router + Redux + redux-thunk
+
+CSS 使用 CSS modules + styled-components 进行管理
+
+---
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
