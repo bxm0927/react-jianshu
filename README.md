@@ -1,6 +1,6 @@
 # react-jianshu
 
-这是一个使用 React 构建的模仿简书 PC 站的联系项目。
+这是一个使用 React 构建的模仿简书 PC 站的练习项目。
 
 技术栈：React + React Router + Redux + redux-thunk
 
