@@ -4,9 +4,15 @@
 
 技术栈：React + React Router + Redux + redux-thunk
 
-CSS 使用 CSS modules + styled-components 进行管理
+CSS 使用 CSS modules / styled-components 进行管理
+
+慕课网学习地址：https://coding.imooc.com/class/229.html
+
+> 如有侵权，请联系删除。
 
 ---
+
+# react-jianshu
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

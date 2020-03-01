@@ -3,7 +3,11 @@ import { connect } from 'react-redux'
 import { shuffle } from 'lodash'
 import styles from './Header.module.scss'
 import logo from '../../assets/images/common/logo.png'
-import { fetchHotList, fetchHotListSuccess } from '../../store/modules/search/actionCreators'
+import { extractNum } from '../../assets/javascripts/utils'
+import {
+  fetchHotList,
+  fetchHotListSuccess,
+} from '../../store/modules/search/actionCreators'
 
 const Header = ({ hotList, fetchHotList, fetchHotListSuccess }) => {
   const [focus, setFocus] = useState(false)
@@ -34,12 +38,12 @@ const Header = ({ hotList, fetchHotList, fetchHotListSuccess }) => {
   function handelHotSearchMouseLeave() {
     setMouseEnter(false)
   }
+  // TODO 这里应该是一个分页（pagination）的逻辑，而不是洗牌（shuffle）
   function handelHotSearchChange() {
     const newHotList = shuffle(hotList)
     fetchHotListSuccess(newHotList)
 
-    // FIXME 只执行了一次，transform 没有改变
-    const originRotate = changeIcon.current.style.transform
+    const originRotate = extractNum(changeIcon.current.style.transform)
     changeIcon.current.style.transform = `rotate(${originRotate + 360}deg)`
   }
   function renderSeaechResult() {
@@ -53,7 +57,8 @@ const Header = ({ hotList, fetchHotList, fetchHotListSuccess }) => {
           <p className={styles.title}>
             热门搜索
             <span className={styles.change} onClick={handelHotSearchChange}>
-              <i ref={changeIcon} className="iconfont icon-huanyihuan1" /> 换一换
+              <i ref={changeIcon} className="iconfont icon-huanyihuan1" />{' '}
+              换一换
             </span>
           </p>
 

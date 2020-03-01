@@ -127,6 +127,7 @@
         .change {
           float: right;
           font-size: 14px;
+          user-select: none;
           cursor: pointer;
           &:hover {
             color: $color-primary;

@@ -7,6 +7,34 @@
 https://www.jianshu.com/",
   "glyphs": [
     {
+      "icon_id": "9904072",
+      "name": "关注",
+      "font_class": "guanzhu",
+      "unicode": "e617",
+      "unicode_decimal": 58903
+    },
+    {
+      "icon_id": "3243576",
+      "name": "作者",
+      "font_class": "zuozhe",
+      "unicode": "e669",
+      "unicode_decimal": 58985
+    },
+    {
+      "icon_id": "5677545",
+      "name": "点赞",
+      "font_class": "dianzan1",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "6234556",
+      "name": "换一换",
+      "font_class": "huanyihuan1",
+      "unicode": "e635",
+      "unicode_decimal": 58933
+    },
+    {
       "icon_id": "122688",
       "name": "back",
       "font_class": "back",
@@ -35,13 +63,6 @@ https://www.jianshu.com/",
       "unicode_decimal": 59047
     },
     {
-      "icon_id": "629357",
-      "name": "搜索",
-      "font_class": "sousuo1",
-      "unicode": "e668",
-      "unicode_decimal": 58984
-    },
-    {
       "icon_id": "1621077",
       "name": "Aa",
       "font_class": "Aa",
@@ -56,13 +77,6 @@ https://www.jianshu.com/",
       "unicode_decimal": 58894
     },
     {
-      "icon_id": "6234556",
-      "name": "换一换",
-      "font_class": "huanyihuan1",
-      "unicode": "e635",
-      "unicode_decimal": 58933
-    },
-    {
       "icon_id": "9699648",
       "name": "手机下载",
       "font_class": "shoujixiazai",
@@ -75,6 +89,13 @@ https://www.jianshu.com/",
       "font_class": "shouye-",
       "unicode": "e64a",
       "unicode_decimal": 58954
+    },
+    {
+      "icon_id": "629357",
+      "name": "搜索",
+      "font_class": "sousuo1",
+      "unicode": "e668",
+      "unicode_decimal": 58984
     }
   ]
 }
