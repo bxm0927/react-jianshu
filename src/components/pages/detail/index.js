@@ -6,11 +6,10 @@ import { fetchDetailContent } from '../../../store/modules/detail/actionCreators
 
 const Detail = ({ detailContent, fetchDetailContent }) => {
   const { id } = useParams()
-  console.log('id: ', id)
 
   useEffect(() => {
     fetchDetailContent(id)
-  }, [])
+  })
 
   function createContent(content) {
     return { __html: content }

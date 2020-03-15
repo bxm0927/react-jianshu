@@ -1,6 +1,6 @@
 import React, { useRef } from 'react'
 import { connect } from 'react-redux'
-import { Redirect, useLocation } from 'react-router-dom'
+import { Redirect } from 'react-router-dom'
 import { LoginWrapper } from './style'
 import { fetchLogin } from '../../../store/modules/login/actionCreators'
 

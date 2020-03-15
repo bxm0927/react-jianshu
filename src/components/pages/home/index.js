@@ -19,7 +19,7 @@ const Home = ({ fetchTopicList, fetchArticleList }) => {
   useEffect(() => {
     fetchTopicList()
     fetchArticleList()
-  }, [])
+  })
 
   return (
     <HomeWrapper className="container clearfix">

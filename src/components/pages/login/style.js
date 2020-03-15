@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import { createGlobalStyle } from 'styled-components'
 
 export const LoginWrapper = styled.div`
   height: 100%;
