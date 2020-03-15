@@ -1,0 +1,1 @@
+export const SET_DETAIL_CONTENT = 'SET_DETAIL_CONTENT'
