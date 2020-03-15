@@ -1,12 +1,12 @@
 import axios from 'axios'
 import { SET_TOPIC_LIST, SET_ARTICLE_LIST } from './actionTypes'
 
-export const setTopicList = topicList => ({
+const setTopicList = topicList => ({
   type: SET_TOPIC_LIST,
   topicList,
 })
 
-export const setArticleList = articleList => ({
+const setArticleList = articleList => ({
   type: SET_ARTICLE_LIST,
   articleList,
 })

@@ -1,17 +1,19 @@
 import React, { useEffect } from 'react'
 import { connect } from 'react-redux'
+
+import Topic from './components/Topic'
+import Board from './components/Board'
+import Banner from './components/Banner'
+import QRCode from './components/QRCode'
+import Writer from './components/Writer'
+import GotoTop from './components/GotoTop'
+import ArticleList from './components/ArticleList'
+
+import { HomeWrapper, LeftWrapper, RighttWrapper } from './style'
 import {
   fetchTopicList,
   fetchArticleList,
 } from '../../../store/modules/home/actionCreators'
-
-import Banner from './components/Banner'
-import Topic from './components/Topic'
-import ArticleList from './components/ArticleList'
-import Board from './components/Board'
-import QRCode from './components/QRCode'
-import Writer from './components/Writer'
-import { HomeWrapper, LeftWrapper, RighttWrapper } from './style'
 
 const Home = ({ fetchTopicList, fetchArticleList }) => {
   useEffect(() => {
@@ -32,6 +34,8 @@ const Home = ({ fetchTopicList, fetchArticleList }) => {
         <QRCode />
         <Writer />
       </RighttWrapper>
+
+      <GotoTop />
     </HomeWrapper>
   )
 }

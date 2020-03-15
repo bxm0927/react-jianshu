@@ -260,3 +260,26 @@ export const WriterWrapper = styled.div`
     border-radius: 4px;
   }
 `
+
+export const GotoTopWrapper = styled.div`
+  position: fixed;
+  right: 40px;
+  bottom: 40px;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  border: 1px solid #dcdcdc;
+  background-color: #fff;
+  transition: 0.1s ease-in;
+  z-index: 10;
+  cursor: pointer;
+  &:hover {
+    background-color: hsla(0, 0%, 71%, 0.1);
+    transition: 0.1s ease-in;
+  }
+  i {
+    color: #2f2f2f;
+    font-size: 26px;
+  }
+`
