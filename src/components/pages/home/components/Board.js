@@ -4,7 +4,7 @@ import { BoardWrapper } from '../style'
 export default function Board() {
   return (
     <BoardWrapper>
-      <a target="_blank" href="/mobile/club">
+       <a href="/mobile/club">
         <img
           alt=""
           src={require('../../../../assets/images/home/board-1.png')}

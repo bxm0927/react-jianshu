@@ -1,4 +1,5 @@
 import React, { useState, useRef } from 'react'
+import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { shuffle } from 'lodash'
 import styles from './Header.module.scss'
@@ -84,21 +85,21 @@ const Header = ({ hotList, fetchHotList, fetchHotListSuccess }) => {
   return (
     <header className={`flexbox-center ${styles.header}`}>
       <div className={styles.logoWrapper}>
-        <a href="/">
+        <Link to="/">
           <img className={styles.logo} src={logo} alt="简书 jianshu.com" />
-        </a>
+        </Link>
       </div>
 
       <div className={`container ${styles.navWrapper}`}>
         <nav className={styles.leftNav}>
-          <a className={`${styles.navItem} ${styles.active}`} href="/">
+          <Link className={`${styles.navItem} ${styles.active}`} to="/">
             <i className="iconfont icon-shouye-" />
             首页
-          </a>
-          <a className={styles.navItem} href="/">
+          </Link>
+          <Link className={styles.navItem} to="/">
             <i className="iconfont icon-shoujixiazai" />
             下载App
-          </a>
+          </Link>
         </nav>
 
         <div className={styles.searchWrapper}>

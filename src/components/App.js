@@ -10,15 +10,13 @@ import styles from './App.module.scss'
 function App() {
   return (
     <div className={styles.app}>
-      <Header />
-
       <BrowserRouter>
+        <Header />
         <Route path="/" exact component={Home} />
         <Route path="/article" component={Article} />
         <Route path="/detail" component={Detail} />
+        <Footer />
       </BrowserRouter>
-
-      <Footer />
     </div>
   )
 }

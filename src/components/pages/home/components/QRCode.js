@@ -1,11 +1,12 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import { QRCodeWrapper } from '../style'
 import qrcode from '../../../../assets/images/home/download-qrcode.png'
 
 export default function QRCode() {
   return (
     <QRCodeWrapper>
-      <a href="/" className="qrcode-content">
+      <Link to="/" className="qrcode-content">
         <img src={qrcode} alt="下载简书手机App" className="download-qrcode" />
         <div className="info">
           <div className="title">
@@ -13,7 +14,7 @@ export default function QRCode() {
           </div>
           <div className="description">随时随地发现和创作内容</div>
         </div>
-      </a>
+      </Link>
 
       <div className="qrcode-zoom">
         <img src={qrcode} alt="下载简书手机App" className="download-qrcode" />

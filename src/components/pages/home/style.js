@@ -68,7 +68,6 @@ export const ArticleListWrapper = styled.div`
     box-sizing: border-box;
     width: 500px;
     .title {
-      display: block;
       font-size: 18px;
       font-weight: bold;
       color: #333;
