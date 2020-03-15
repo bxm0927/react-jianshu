@@ -1,0 +1,2 @@
+export const SET_TOPIC_LIST = 'SET_TOPIC_LIST'
+export const SET_ARTICLE_LIST = 'SET_ARTICLE_LIST'
