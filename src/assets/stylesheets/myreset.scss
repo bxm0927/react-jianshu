@@ -5,7 +5,7 @@
  * @Author: xiaoming.bai
  * @Date: 2019-03-05 10:33:59
  * @Last Modified by: xiaoming.bai
- * @Last Modified time: 2020-01-01 14:08:28
+ * @Last Modified time: 2020-03-15 18:46:46
  */
 
 // Document
@@ -16,7 +16,6 @@ html {
   -webkit-text-size-adjust: 100%;
 }
 
-// PC
 body {
   min-width: 1226px;
   color: #333;
@@ -26,26 +25,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
-}
-
-// Mobile
-body {
-  margin-left: auto !important;
-  margin-right: auto !important;
-  min-width: 320px;
-  max-width: 1080px;
-
-  color: #333;
-  background-color: #fff;
-  font: 14px/1.5 'Helvetica Neue', Helvetica, Arial, 'Microsoft Yahei', 'Hiragino Sans GB',
-    'Heiti SC', 'WenQuanYi Micro Hei', sans-serif;
-  -webkit-overflow-scrolling: touch;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility;
-
-  padding-bottom: constant(safe-area-inset-bottom);
-  padding-bottom: env(safe-area-inset-bottom);
 }
 
 // Remove the margin and padding in all browsers.

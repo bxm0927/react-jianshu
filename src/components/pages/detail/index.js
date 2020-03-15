@@ -2,7 +2,7 @@ import React, { useEffect, Fragment } from 'react'
 import { useParams } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { DetailWrapper } from './style'
-import { fetchDetailContent } from '../../../store/modules/detail/actionCreates'
+import { fetchDetailContent } from '../../../store/modules/detail/actionCreators'
 
 const Detail = ({ detailContent, fetchDetailContent }) => {
   const { id } = useParams()
@@ -19,7 +19,7 @@ const Detail = ({ detailContent, fetchDetailContent }) => {
   return (
     <Fragment>
       {detailContent && (
-        <DetailWrapper className="container clearfix">
+        <DetailWrapper className="container">
           <h1 className="title">{detailContent.title}</h1>
           <div
             className="content"

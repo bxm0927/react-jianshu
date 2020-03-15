@@ -1,16 +1,24 @@
+import { shuffle } from 'lodash'
 import React, { useState, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
-import { shuffle } from 'lodash'
+
 import styles from './Header.module.scss'
 import logo from '../../assets/images/common/logo.png'
 import { extractNum } from '../../assets/javascripts/utils'
+import { setLogout } from '../../store/modules/login/actionCreators'
 import {
   fetchHotList,
   fetchHotListSuccess,
 } from '../../store/modules/search/actionCreators'
 
-const Header = ({ hotList, fetchHotList, fetchHotListSuccess }) => {
+const Header = ({
+  hasLogin,
+  setLogout,
+  hotList,
+  fetchHotList,
+  fetchHotListSuccess,
+}) => {
   const [focus, setFocus] = useState(false)
   const [mouseEnter, setMouseEnter] = useState(false)
   const changeIcon = useRef(null)
@@ -39,7 +47,7 @@ const Header = ({ hotList, fetchHotList, fetchHotListSuccess }) => {
   function handelHotSearchMouseLeave() {
     setMouseEnter(false)
   }
-  // TODO 这里应该是一个分页（pagination）的逻辑，而不是洗牌（shuffle）
+  // TODO: 这里应该是一个分页（pagination）的逻辑，而不是洗牌（shuffle）
   function handelHotSearchChange() {
     const newHotList = shuffle(hotList)
     fetchHotListSuccess(newHotList)
@@ -81,6 +89,9 @@ const Header = ({ hotList, fetchHotList, fetchHotListSuccess }) => {
       </div>
     )
   }
+  function logout() {
+    setLogout()
+  }
 
   return (
     <header className={`flexbox-center ${styles.header}`}>
@@ -116,9 +127,15 @@ const Header = ({ hotList, fetchHotList, fetchHotListSuccess }) => {
         </div>
 
         <div className={styles.rightNav}>
-          <a className={`fr ${styles.login}`} href="/">
-            登录
-          </a>
+          {hasLogin ? (
+            <span className={`fr ${styles.login}`} onClick={logout}>
+              退出
+            </span>
+          ) : (
+            <Link className={`fr ${styles.login}`} to="/login">
+              登录
+            </Link>
+          )}
           <a className={`fr ${styles.font}`} href="/">
             <i className="iconfont icon-Aa" />
           </a>
@@ -136,10 +153,12 @@ const Header = ({ hotList, fetchHotList, fetchHotListSuccess }) => {
 }
 
 const mapStateToProps = state => ({
+  hasLogin: state.login.hasLogin,
   hotList: state.search.hotList,
 })
 
 const mapDispatchToProps = {
+  setLogout,
   fetchHotList,
   fetchHotListSuccess,
 }
